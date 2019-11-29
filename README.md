@@ -23,6 +23,8 @@ Db类提示：
 
 ![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/4.png?raw=true)
 
+![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/6.png?raw=true)
+
 
 ## 模型方法(inc、dec)
 
