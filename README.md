@@ -8,9 +8,20 @@ thinkphp6.0 在IDE中的自动完成、代码提示助手。
 ## IDE助手
 将文件`_ide_helper.php` 放到项目根目录中即可生效，效果如下。
 
+门面类提示：
+
 ![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/1.png?raw=true)
 
-![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/2.png?raw=true)
+
+
+
+模型提示：
+
+![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/3.png?raw=true)
+
+Db类提示：
+
+![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/4.png?raw=true)
 
 
 ## 模型IDE助手
