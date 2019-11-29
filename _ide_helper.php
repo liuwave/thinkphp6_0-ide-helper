@@ -3846,37 +3846,261 @@ namespace think\facade {
     }
     
     /**
-     * @see     \think\Session
+     * @see \think\Session
      * @package think\facade
      * @mixin \think\Session
      */
-    class Session
-    {
+    
+    class Session{
         /**
-         * 获取Session配置
+         * 设置数据
          * @access public
-         *
-         * @param null|string $name    名称
-         * @param mixed       $default 默认值
-         *
+         * @param array $data
+         * @return void
+         */
+        public static function setData(array $data): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->setData($data);
+        }
+        /**
+         * session初始化
+         * @access public
+         * @return void
+         */
+        public static function init(): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->init();
+        }
+        /**
+         * 设置SessionName
+         * @access public
+         * @param string $name session_name
+         * @return void
+         */
+        public static function setName(string $name): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->setName($name);
+        }
+        /**
+         * 获取sessionName
+         * @access public
+         * @return string
+         */
+        public static function getName(): string
+        
+        {
+            /** @var \think\Session $instance */
+            
+            return $instance->getName();
+        }
+        /**
+         * session_id设置
+         * @access public
+         * @param string $id session_id
+         * @return void
+         */
+        public static function setId($id = null): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->setId($id);
+        }
+        /**
+         * 获取session_id
+         * @access public
+         * @return string
+         */
+        public static function getId(): string
+        
+        {
+            /** @var \think\Session $instance */
+            
+            return $instance->getId();
+        }
+        /**
+         * 获取所有数据
+         * @return array
+         */
+        public static function all(): array
+        
+        {
+            /** @var \think\Session $instance */
+            
+            return $instance->all();
+        }
+        /**
+         * session设置
+         * @access public
+         * @param string $name  session名称
+         * @param mixed  $value session值
+         * @return void
+         */
+        public static function set(string $name, $value): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->set($name,$value);
+        }
+        /**
+         * session获取
+         * @access public
+         * @param string $name    session名称
+         * @param mixed  $default 默认值
          * @return mixed
          */
-        public static function getConfig(string $name = null, $default = null)
-        {
-            
-            /** @var \think\Session $instance */
-            return $instance->getConfig($name, $default);
-        }
+        public static function get(string $name, $default = null)
         
-        /**
-         * 默认驱动
-         * @return string|null
-         */
-        public static function getDefaultDriver()
         {
-            
             /** @var \think\Session $instance */
-            return $instance->getDefaultDriver();
+            
+            return $instance->get($name,$default);
+        }
+        /**
+         * session获取并删除
+         * @access public
+         * @param string $name session名称
+         * @return mixed
+         */
+        public static function pull(string $name)
+        
+        {
+            /** @var \think\Session $instance */
+            
+            return $instance->pull($name);
+        }
+        /**
+         * 添加数据到一个session数组
+         * @access public
+         * @param string $key
+         * @param mixed  $value
+         * @return void
+         */
+        public static function push(string $key, $value): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->push($key,$value);
+        }
+        /**
+         * 判断session数据
+         * @access public
+         * @param string $name session名称
+         * @return bool
+         */
+        public static function has(string $name): bool
+        
+        {
+            /** @var \think\Session $instance */
+            
+            return $instance->has($name);
+        }
+        /**
+         * 删除session数据
+         * @access public
+         * @param string $name session名称
+         * @return void
+         */
+        public static function delete(string $name): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->delete($name);
+        }
+        /**
+         * 清空session数据
+         * @access public
+         * @return void
+         */
+        public static function clear(): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->clear();
+        }
+        /**
+         * 销毁session
+         */
+        public static function destroy(): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->destroy();
+        }
+        /**
+         * 重新生成session id
+         * @param bool $destroy
+         */
+        public static function regenerate(bool $destroy = false): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->regenerate($destroy);
+        }
+        /**
+         * 保存session数据
+         * @access public
+         * @return void
+         */
+        public static function save(): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->save();
+        }
+        /**
+         * session设置 下一次请求有效
+         * @access public
+         * @param string $name  session名称
+         * @param mixed  $value session值
+         * @return void
+         */
+        public static function flash(string $name, $value): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->flash($name,$value);
+        }
+        /**
+         * 将本次闪存数据推迟到下次请求
+         *
+         * @return void
+         */
+        public static function reflash(): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->reflash();
+        }
+        /**
+         * 清空当前请求的session数据
+         * @access public
+         * @return void
+         */
+        public static function clearFlashData(): void
+        
+        {
+            /** @var \think\Session $instance */
+            
+             $instance->clearFlashData();
         }
         
     }
