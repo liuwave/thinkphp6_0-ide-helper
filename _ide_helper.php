@@ -4871,6 +4871,131 @@ namespace think\facade {
      */
     class Db
     {
+        
+        /**
+         * 指定当前数据表名（不含前缀）
+         * @access public
+         * @param string $name 不含前缀的数据表名字
+         * @return \think\Db
+         */
+        public static function name(string $name)
+        {
+            /** @var \think\Db $instance */
+            return $instance->name($name);
+        }
+        /**
+         * 指定当前操作的数据表
+         * @access public
+         * @param mixed $table 表名
+         * @return \think\Db
+         */
+        public static function table($table)
+        {
+            /** @var \think\Db $instance */
+            return $instance->table($table);
+        }
+        
+        /**
+         * 执行数据库事务
+         * @access public
+         * @param callable $callback 数据操作方法回调
+         * @return mixed
+         */
+        public static function transaction(callable $callback)
+        {
+            /** @var \think\Db $instance */
+            return $instance->transaction($callback);
+        }
+        
+        /**
+         * 启动事务
+         * @access public
+         * @return void
+         */
+        public static function startTrans(): void
+        {
+            /** @var \think\Db $instance */
+            $instance->startTrans();
+        }
+        
+        /**
+         * 用于非自动提交状态下面的查询提交
+         * @access public
+         * @return void
+         * @throws \PDOException
+         */
+        public static function commit(): void
+        {
+            /** @var \think\Db $instance */
+            $instance->commit();
+        }
+        
+        /**
+         * 事务回滚
+         * @access public
+         * @return void
+         * @throws \PDOException
+         */
+        public static function rollback(): void
+        {
+            /** @var \think\Db $instance */
+            $instance->rollback();
+        }
+        /**
+         * 执行查询 返回数据集
+         * @access public
+         * @param string $sql  sql指令
+         * @param array  $bind 参数绑定
+         * @return array
+         * @throws \think\db\exception\BindParamException
+         * @throws \PDOException
+         */
+        public function query(string $sql, array $bind = []): array
+        {
+            /** @var \think\Db $instance */
+            return $instance->query($sql,$bind);
+        }
+        
+        /**
+         * 设置从主服务器读取数据
+         * @access public
+         * @param bool $readMaster 是否从主服务器读取
+         * @return \think\Db
+         */
+        public function master(bool $readMaster = true)
+        {
+            /** @var \think\Db $instance */
+            return $instance->master($readMaster);
+        }
+        /**
+         * 执行语句
+         * @access public
+         * @param string $sql  sql指令
+         * @param array  $bind 参数绑定
+         * @return int
+         * @throws \think\db\exception\BindParamException
+         * @throws \PDOException
+         */
+        public function execute(string $sql, array $bind = []): int
+        {
+            /** @var \think\Db $instance */
+            return $instance->execute($sql,$bind);
+        }
+        
+        /**
+         * 创建/切换数据库连接查询
+         * @access public
+         * @param string|null $name  连接配置标识
+         * @param bool        $force 强制重新连接
+         * @return \think\db\BaseQuery
+         */
+        public function connect(string $name = null, bool $force = false): \think\db\BaseQuery
+        {
+            
+            /** @var \think\Db $instance */
+            return $instance->connect($name,$force);
+        }
+        
         /**
          * 设置配置对象
          * @access public
