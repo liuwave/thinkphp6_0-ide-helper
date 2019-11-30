@@ -14,20 +14,20 @@ thinkphp6.0 在IDE中的自动完成、代码提示助手。
 
 门面(facade)类提示：
 
-![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/1.png?raw=true)
+![提示](https://s2.ax1x.com/2019/11/30/QEqwTJ.png)
 
 
 
 
 模型提示：
 
-![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/3.png?raw=true)
+![提示](https://s2.ax1x.com/2019/11/30/QEqDYR.png)
 
 Db类提示：
 
-![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/4.png?raw=true)
+![提示](https://s2.ax1x.com/2019/11/30/QEqdw4.png)
 
-![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/6.png?raw=true)
+![提示](https://s2.ax1x.com/2019/11/30/QEqrf1.png)
 
 
 ## 模型方法(inc、dec)
@@ -45,4 +45,4 @@ Db类提示：
 ```
 
 效果：
-![提示](https://github.com/liuwave/thinkphp6_0-ide-helper/blob/master/static/images/5.png?raw=true)
+![提示](https://s2.ax1x.com/2019/11/30/QEqBk9.png)
