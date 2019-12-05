@@ -5085,7 +5085,42 @@ namespace think\facade {
             /** @var \think\View $instance */
             return $instance->getDefaultDriver();
         }
-        
+        /**
+         * 检测是否存在模板文件
+         * @access public
+         * @param  string $template 模板文件或者模板规则
+         * @return bool
+         */
+        public static function exists(string $template): bool
+        {
+            /** @var \think\contract\TemplateHandlerInterface $instance */
+            return  $instance->exists($template);
+        }
+    
+        /**
+         * 配置模板引擎
+         * @access private
+         * @param  array $config 参数
+         * @return void
+         */
+        public static function config(array $config): void
+        {
+            /** @var \think\contract\TemplateHandlerInterface $instance */
+             $instance->config($config);
+        }
+    
+        /**
+         * 获取模板引擎配置
+         * @access public
+         * @param  string $name 参数名
+         * @return mixed
+         */
+        public static function getConfig(string $name)
+        {
+            /** @var \think\contract\TemplateHandlerInterface$instance */
+            return $instance->getConfig($name);
+        }
+    
     }
     
     /**
