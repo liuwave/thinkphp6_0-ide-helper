@@ -30,19 +30,8 @@ Db类提示：
 ![提示](https://s2.ax1x.com/2019/11/30/QEqrf1.png)
 
 
-## 模型方法(inc、dec)
+## 模型方法提示
 
-对模型***继承Model类***的情况，部分模型方法(inc、dec)不能自动完成和代码提示，需要按以下方法处理。
 
-需要在 `\vendor\topthink\think-orm\src\Model.php` 类注释末尾中添加以下内容：
-```php
+可参考： https://github.com/yunwuxin/think-model-helper
 
- * @mixin \think\db\Query
- * @method \think\db\Query inc(string $field, float $step = 1) static 字段值增长
- * @method \think\db\Query dec(string $field, float $step = 1) static 字段值减少
- * @method \think\db\Query where($field, $op = null, $condition = null) static 指定AND查询条件
-
-```
-
-效果：
-![提示](https://s2.ax1x.com/2019/11/30/QEqBk9.png)
